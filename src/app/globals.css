@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    html {
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+    body {
+        @apply bg-background text-white;
+    }
+}
+
+@layer components {
+    .animate-pulse-green {
+        animation: pulse-green 0.5s ease-in-out;
+    }
+    .animate-pulse-red {
+        animation: pulse-red 0.5s ease-in-out;
+    }
+}
+
+@keyframes pulse-green {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgba(0, 212, 170, 0.2);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes pulse-red {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgba(255, 107, 107, 0.2);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
